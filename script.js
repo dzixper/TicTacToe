@@ -17,11 +17,13 @@ let playButton = document.getElementById("play-button"),
 let char = "x",
     turn = 0,
     myAudio = myAudioQuack;
-currentPlayer.innerText = "Now it's -" + char + "- turn";
+
 
 function who() {
     currentPlayer.innerText = "Now it's -" + char + "- turn";
 }
+
+who();
 
 function reset() {
     char = "x";
