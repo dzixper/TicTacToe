@@ -14,15 +14,15 @@ let playButton = document.getElementById("play-button"),
     myAudioDoot = document.getElementById("my-audio-doot");
 
 
-let char = "x",
-    turn = 0,
-    myAudio = myAudioQuack;
+let char,
+    turn,
+    myAudio;
 
 
 function who() {
     currentPlayer.innerText = "Now it's -" + char + "- turn";
 }
-
+reset();
 who();
 
 function reset() {
