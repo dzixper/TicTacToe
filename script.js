@@ -10,13 +10,11 @@ let playButton = document.getElementById("play-button"),
     b21 = document.getElementById("b21"),
     b22 = document.getElementById("b22"),
     currentPlayer = document.getElementById("current-player"),
-    myAudioQuack = document.getElementById("my-audio-quack"),
-    myAudioDoot = document.getElementById("my-audio-doot");
+    myAudioQuack = document.getElementById("my-audio-quack");
 
 
 let char,
-    turn,
-    myAudio;
+    turn;
 
 
 function who() {
@@ -28,7 +26,6 @@ who();
 function reset() {
     char = "x";
     turn = 0;
-    myAudio = myAudioQuack;
     who();
     board.style.display = 'grid';
     b00.value = "  ";
@@ -54,10 +51,8 @@ function reset() {
 function changePlayer() {
     if (char == "x") {
         char = "o";
-        myAudio = myAudioDoot;
     } else {
         char = "x";
-        myAudio = myAudioQuack;
     }
 }
 
@@ -68,7 +63,7 @@ function checkDraw() {
 
 function mark(cell) {
     if (cell.value == "  ") {
-        myAudio.play();
+        myAudioQuack.play();
         cell.value = char;
         cell.className = "boardButtonTaken";
         turn += 1;
